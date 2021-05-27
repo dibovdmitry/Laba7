@@ -3,12 +3,12 @@
 
 import sys
 if __name__ == '__main__':
-    A = (5, 4, 3, 4, 5, 5, 3)
-    G = (3, 2, 5, 5, 3, 4, 4, 4, 4, 3)
-    F = (4, 2, 2, 5, 5, 5)
-    SA = sum(A)
-    SG = sum(G)
-    SF = sum(F)
+    A = tuple(map(int, input("Оценки по алгебре: ").split()))
+    G = tuple(map(int, input("Оценки по геометрии: ").split()))
+    F = tuple(map(int, input("Оценки по физике: ").split()))
+    SA = sum(A) / len(A)
+    SG = sum(G) / len(G)
+    SF = sum(F) / len(F)
     if SA > SG and SF < SA:
         print(f'Самая высокая успеваемость по алгебре')
     elif SG > SA and SF < SG:
